@@ -41,7 +41,8 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <arguments>
-                        "" ""
+                        <argument>jsonPath</argument>
+                        <argument>imgPath</argument>
                     </arguments>
                 </configuration>
             </plugin>
