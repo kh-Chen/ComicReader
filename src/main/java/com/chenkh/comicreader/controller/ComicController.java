@@ -5,19 +5,14 @@ import com.chenkh.comicreader.entity.Variables;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.stream.Collectors;
 
 ///comic/booklist.html
 @Controller
@@ -240,22 +235,22 @@ public class ComicController {
         }
     }
 
-    @GetMapping(value = "/getImage")
-    public void getImage(HttpServletResponse response,String path) throws IOException {
-        path = decodeURLSafe(path);
-
-        try (ServletOutputStream outputStream = response.getOutputStream();
-             FileInputStream fileInputStream = new FileInputStream(path);) {
-            
-            BufferedImage image = ImageIO.read(fileInputStream);
-            response.setContentType("image/png");
-            if (image != null) {
-                ImageIO.write(image, "png", outputStream);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    @GetMapping(value = "/getImage")
+//    public void getImage(HttpServletResponse response,String path) throws IOException {
+//        path = decodeURLSafe(path);
+//
+//        try (ServletOutputStream outputStream = response.getOutputStream();
+//             FileInputStream fileInputStream = new FileInputStream(path);) {
+//            
+//            BufferedImage image = ImageIO.read(fileInputStream);
+//            response.setContentType("image/png");
+//            if (image != null) {
+//                ImageIO.write(image, "png", outputStream);
+//            }
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
     public static String replaceURLSafe(String str) {
         return str.replaceAll("&", "&amp;").replaceAll("\\?", "%3F");
