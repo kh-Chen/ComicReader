@@ -44,6 +44,7 @@
                         <argument>jsonPath</argument>
                         <argument>imgPath</argument>
                     </arguments>
+                    <mainClass>com.chenkh.comicreader.ComicreaderApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -56,6 +57,15 @@
                         --no-fallback
                     </buildArgs>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>build-native</id>
+                        <goals>
+                            <goal>compile-no-fork</goal>
+                        </goals>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
