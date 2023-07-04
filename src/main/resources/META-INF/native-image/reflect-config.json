@@ -91,14 +91,14 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["com.fasterxml.jackson.databind.ObjectMapper"] }, {"name":"booklist","parameterTypes":["jakarta.servlet.http.HttpServletResponse"] }]
+  "methods":[{"name":"<init>","parameterTypes":["com.fasterxml.jackson.databind.ObjectMapper"] }, {"name":"booklist","parameterTypes":["jakarta.servlet.http.HttpServletResponse"] }, {"name":"chapterlist","parameterTypes":["jakarta.servlet.http.HttpServletResponse","java.lang.String"] }, {"name":"imglist","parameterTypes":["jakarta.servlet.http.HttpServletResponse","java.lang.String","java.lang.String"] }, {"name":"move","parameterTypes":["jakarta.servlet.http.HttpServletResponse","java.lang.String","java.lang.String"] }, {"name":"switchEnd","parameterTypes":["jakarta.servlet.http.HttpServletResponse","java.lang.String"] }]
 },
 {
   "name":"com.chenkh.comicreader.entity.Book",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"setEnd","parameterTypes":["boolean"] }, {"name":"setId","parameterTypes":["java.lang.String"] }, {"name":"setMid","parameterTypes":["java.lang.String"] }, {"name":"setName","parameterTypes":["java.lang.String"] }, {"name":"setReadAt","parameterTypes":["java.lang.String"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getMid","parameterTypes":[] }, {"name":"getName","parameterTypes":[] }, {"name":"getReadAt","parameterTypes":[] }, {"name":"isEnd","parameterTypes":[] }, {"name":"setEnd","parameterTypes":["boolean"] }, {"name":"setId","parameterTypes":["java.lang.String"] }, {"name":"setMid","parameterTypes":["java.lang.String"] }, {"name":"setName","parameterTypes":["java.lang.String"] }, {"name":"setReadAt","parameterTypes":["java.lang.String"] }]
 },
 {
   "name":"com.couchbase.client.java.Bucket"
